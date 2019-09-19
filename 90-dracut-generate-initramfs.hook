@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Upgrade
+Operation = Install
+Target = linux*
+
+[Action]
+Description = Generating initramfs images via dracut
+When = PostTransaction
+Exec = /bin/bash /usr/bin/initramfs
