@@ -8,3 +8,4 @@ Target = linux*
 Description = Generating initramfs images via dracut
 When = PostTransaction
 Exec = /bin/bash /usr/bin/dracut-initramfs
+NeedsTargets

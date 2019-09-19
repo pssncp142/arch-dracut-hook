@@ -1,6 +1,12 @@
 #!/bin/bash
 
-KERNELS=($(pacman -Ql | grep vmlinuz-linux | awk '{print $1}'))
+declare -a KERNELS
+
+while read -r KERNEL; do
+    KERNELS+=($KERNEL)
+done
+
+##KERNELS=($(pacman -Ql | grep vmlinuz-linux | awk '{print $1}'))
 KERNEL_VERS=($(pacman -Q ${KERNELS[@]} | awk '{sub(/.arch/,"-arch"); print $2}'))
 
 OPTS="-f -H --no-hostonly-cmdline"
