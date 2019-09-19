@@ -1,7 +1,7 @@
 # Maintainer: Yigit Dallilar <yigit.dallilar@gmail.com>
 
 pkgname=arch-dracut-hook-git
-pkgver=r1.9572674
+pkgver=r2.2bd1897
 pkgrel=1
 epoch=
 arch=(any)
